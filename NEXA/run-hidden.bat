@@ -1,3 +1,3 @@
 @echo off
 cd /d %~dp0
-wscript run_hidden_real.vbs
+powershell -WindowStyle Hidden -Command "Start-Process 'mine_nexa_with_oc.bat'"
